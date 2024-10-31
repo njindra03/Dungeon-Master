@@ -13,4 +13,12 @@ public class GameManager : MonoBehaviour
             SceneManager.LoadScene("Room1");
         }
     }
+    //When the player presses the tab key, load the shop menu scene
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Tab))
+        {
+            SceneManager.LoadScene("ShopMenu");
+        }
+    }
 }

@@ -8,8 +8,9 @@ public class EnemyScript : MonoBehaviour
     [SerializeField]private float minDistance = 10.0f;
     private bool targetCollision = false;
     [SerializeField] private float speed = 2.0f;
+    [SerializeField] private int experience = 10;
     private float thrust = 1.0f;
-
+    private Transform target;
     [SerializeField] private int health = 5;
 
     void Start()
@@ -64,5 +65,10 @@ public class EnemyScript : MonoBehaviour
     {
         Debug.Log("TakeDamage called with amount: " + amount);
         health -= amount;
+        if (health <= 0)
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerScript>().GainExperience(experience);
+            Destroy(gameObject);
+        }
     }
 }
