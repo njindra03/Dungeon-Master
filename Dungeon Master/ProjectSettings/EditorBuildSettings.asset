@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SpawnRoom.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Room1.unity
+    path: Assets/Scenes/0.unity
     guid: bf97e05c47264ac42be0fab56697c1dc
+  - enabled: 1
+    path: Assets/Scenes/1.unity
+    guid: 518dd4c9b2df936409ec1b19818a3c05
+  - enabled: 1
+    path: Assets/Scenes/2.unity
+    guid: 8edae8fdfce3a0e45b6b347cd002d5bf
   m_configObjects: {}
