@@ -50,6 +50,11 @@ public class PlayerScript : MonoBehaviour
             transform.localScale = new Vector3(1, 1, 1);
             turnedLeft = false; 
         }
+
+        if(health <= 0)
+        {
+            Death();
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,7 +63,7 @@ public class PlayerScript : MonoBehaviour
         {
             transform.GetChild(1).gameObject.SetActive(true);
             health -= 10;
-            healthWidth -= 10;
+            healthWidth -= 50;
             Vector2 temp = new Vector2(healthWidth, healthHeight);
             healthfill.rectTransform.sizeDelta = temp;
             Invoke("HidePlayerBlood", 0.25f);
@@ -75,5 +80,13 @@ public class PlayerScript : MonoBehaviour
         experience += amount;
         expText.text = experience.ToString();
     }
-
+    
+    public void Death()
+    {
+        if (health <= 0)
+        {
+            Debug.Log("Player is dead");
+            
+        }
+    }
 }

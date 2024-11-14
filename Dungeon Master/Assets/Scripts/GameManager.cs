@@ -5,6 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    //create a static instance of the GameManager
+    public static GameManager instance;
     // When the player touches the hatch tilemap, load the next scene randomly but not the current scene and never the spawnroom
     private void OnTriggerEnter2D(Collider2D collision)
     {
